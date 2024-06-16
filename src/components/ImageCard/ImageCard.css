@@ -1,0 +1,38 @@
+.imageCard {
+  margin-top: 30px;
+  width: 190px;
+  box-shadow: 21px 22px 13px -1px #a1cfe2;
+  border-radius: 26px;
+  background-color: rgb(214, 238, 187);
+}
+
+.imageCard img {
+  width: 100px;
+  height: auto;
+}
+
+.imageCardName {
+  padding: 0;
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* コンテナを左右に分ける */
+}
+
+.pokemonCardContainer,
+.imageContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* 縦に並べる */
+  align-items: center; /* 中央揃えにする */
+}
+
+.imageContainer img {
+  width: 100px; /* 画像の幅を調整 */
+  height: auto; /* 高さは自動調整 */
+  margin-bottom: 10px; /* 画像間のスペース */
+}
