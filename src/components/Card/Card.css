@@ -17,3 +17,16 @@
 .cardInfo {
     text-align: center;
 }
+
+
+.imageContainer {
+    display: flex;
+    flex-direction: column; /* 画像を縦一列に配置 */
+    align-items: center;
+    gap: 10px; /* 画像間の隙間 */
+}
+
+.imageContainer img {
+    width: 100px; /* 画像の幅を小さくする */
+    height: auto; /* アスペクト比を保持 */
+}

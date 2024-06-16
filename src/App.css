@@ -36,5 +36,4 @@
 /* ボタンの装飾（ホバー時Y方向に沈み込む */
 .btn button:hover {
   transform: translateY(5px);
-
 }

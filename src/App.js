@@ -8,9 +8,11 @@ import { getAllPokemon, getPokemon } from "./utiles/pokemon.js";
 function App() {
   // APIのURL
   const initialURL = "https://pokeapi.co/api/v2/pokemon";
+  const imagesURL = "https://picsum.photos/v2/list?page=2&limit=20";
   //useState: Reactの状態を管理する→ページの読み込み状態を管理
   const [loading, setLoading] = useState(true);
   const [pokemonData, setPokemonData] = useState([]);
+  const [images, setImages] = useState([]);
   // 次のページのURL
   //const [nextUrl, setNextUrl] = useState("");
   // 前のページのURL
@@ -21,7 +23,7 @@ function App() {
     const fetchPokemonDate = async () => {
       // 全体ポケモンのデータを取得(awaitで「getAllPokemon」を待つ)
       let res = await getAllPokemon(initialURL);
-
+      //console.log(res);
       // loadPokemonで各ポケモンの詳細データを取得
       loadPokemon(res.results);
       //console.log(res);
@@ -32,7 +34,7 @@ function App() {
       setLoading(false);
     };
     fetchPokemonDate();
-  }, []);
+  //}, []); →配列形式になっているのでここをコメントアウトを戻せばOK
 
   // loadPokemonの詳細ポケモンデータを取得
   const loadPokemon = async(date) => {
@@ -47,6 +49,17 @@ function App() {
     );
     setPokemonData(_pokemonDate);
   };
+
+  // picsum.photosAPI画像データを取得する
+  const fetchImages = async () => {
+    const response = await fetch(imagesURL);
+    const data = await response.json();
+    setImages(data);
+  };
+  fetchImages();
+  }, []);
+
+
   //console.log(pokemonData);
 
   // 次ページのボタンを押した時の処理
@@ -88,21 +101,28 @@ function App() {
       {loading ? (
         <h1>Loading...ロード中です。</h1>
        ) : (
-        <>
+      <>
+        <div className="container">
           <div className="pokemonCardContainer">
             {pokemonData.map((pokemon, i) => {
               // Cardコンポーネント化して、別ファイルに記述src\components\Card\Card.js
               return <Card key={i} pokemon={pokemon} />;
             })}
           </div>
-          <div className="btn">
+          <div className="imageContainer">
+          {images.map((image, index) => (
+            <img key={index} src={image.download_url} />
+          ))}
+          </div>
+          {/*<div className="btn">*/}
             {/* <button onClick={handlePrevPage}>Previous</button> */}
             {/* <button onClick={handleNextPage}>Next</button> */}
-          </div>
-        </>
-      )}
-      </div>
-    </>
+          {/*</div>*/}
+        </div>
+      </>
+    )}
+    </div>
+  </>
   );
 }
 
