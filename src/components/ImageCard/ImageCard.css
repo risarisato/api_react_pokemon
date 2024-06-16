@@ -1,14 +1,9 @@
-.imageCard {
-  margin-top: 30px;
-  width: 190px;
+.image {
+  margin-top: 20px;
+  width: 250px;
   box-shadow: 21px 22px 13px -1px #a1cfe2;
   border-radius: 26px;
   background-color: rgb(214, 238, 187);
-}
-
-.imageCard img {
-  width: 100px;
-  height: auto;
 }
 
 .imageCardName {
@@ -32,6 +27,7 @@
 }
 
 .imageContainer img {
+  margin-top: 15px;
   width: 100px; /* 画像の幅を調整 */
   height: auto; /* 高さは自動調整 */
   margin-bottom: 10px; /* 画像間のスペース */

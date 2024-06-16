@@ -1,0 +1,13 @@
+.harryPotterCard {
+  margin-top: 20px;
+  background-color: #eae6af;
+  border-radius: 10px;
+  box-shadow: 15px 15px 13px -1px #ff887d;
+}
+
+.harryPotterCard img {
+  margin-top: 5px;
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+}
