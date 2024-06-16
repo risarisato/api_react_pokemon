@@ -1,0 +1,11 @@
+nav {
+  background-color: beige;
+  color: rgb(55, 73, 156);
+  height: 65px;
+  font-weight: 600;
+  font-size: 25px;
+  /* text-align: center; */
+  display: flex; /* 横並び */
+  justify-content: center; /* 中央 */
+  align-items: center; /* 交差軸に対して中央 */
+}

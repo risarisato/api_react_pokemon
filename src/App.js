@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import './App.css';
 import Card from "./components/Card/Card";
+import Navbar from "./components/Navber/Navbar";
+
 import { getAllPokemon, getPokemon } from "./utiles/pokemon.js";
 
 function App() {
+  // APIのURL
   const initialURL = "https://pokeapi.co/api/v2/pokemon";
-  // useState: Reactの状態を管理する→ページの読み込み状態を管理
+  //useState: Reactの状態を管理する→ページの読み込み状態を管理
   const [loading, setLoading] = useState(true);
   const [pokemonData, setPokemonData] = useState([]);
 
@@ -43,21 +46,25 @@ function App() {
    Reactの書き方: {}で囲む→JSX記号を埋め込むJSXフラグメント<></>
    ここはHTMLのように見えるが、JSX記号で記述されている
   */
-  return<div className="App">
-    {loading ? (
-      <h1>Loading...ロード中です。</h1>
-     ) : (
-      <>
-        <h1>pokemonAPI取得しました！</h1>
-        <div className="pokemonCardContainer">
-          {pokemonData.map((pokemon, i) => {
-            // Cardコンポーネント化して、別ファイルに記述src\components\Card\Card.js
-            return <Card key={i} pokemon={pokemon} />;
-          })}
-        </div>
-      </>
-    )}
-  </div>;
+  return (
+    <>
+      <Navbar />
+      <div className="App">
+      {loading ? (
+        <h1>Loading...ロード中です。</h1>
+       ) : (
+        <>
+          <div className="pokemonCardContainer">
+            {pokemonData.map((pokemon, i) => {
+              // Cardコンポーネント化して、別ファイルに記述src\components\Card\Card.js
+              return <Card key={i} pokemon={pokemon} />;
+            })}
+          </div>
+        </>
+      )}
+      </div>
+    </>
+  );
 }
 
 export default App;

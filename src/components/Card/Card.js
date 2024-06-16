@@ -1,5 +1,6 @@
 // ポケモン詳細情報を表示するコンポーネント
 import React from "react";
+import "./Card.css";
 
 const Card = ({ pokemon }) => {
     return (
