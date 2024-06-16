@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import './App.css';
+import Card from "./components/Card/Card";
 import { getAllPokemon, getPokemon } from "./utiles/pokemon.js";
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
   /*
    JSX記号の三項演算子:ブラウザに表示される箇所
    Reactの書き方: {}で囲む→JSX記号を埋め込むJSXフラグメント<></>
+   ここはHTMLのように見えるが、JSX記号で記述されている
   */
   return<div className="App">
     {loading ? (
@@ -47,6 +49,12 @@ function App() {
      ) : (
       <>
         <h1>pokemonAPI取得しました！</h1>
+        <div className="pokemonCardContainer">
+          {pokemonData.map((pokemon, i) => {
+            // Cardコンポーネント化して、別ファイルに記述src\components\Card\Card.js
+            return <Card key={i} pokemon={pokemon} />;
+          })}
+        </div>
       </>
     )}
   </div>;
