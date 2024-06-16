@@ -7,7 +7,7 @@
 
 /* App全体＝グリッド3枠で表示 */
 .pokemonCardContainer {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center; /* 中央 */
   gap:20px; /* グリッド間の間隔 */

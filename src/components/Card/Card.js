@@ -10,7 +10,7 @@ const Card = ({ pokemon }) => {
           <img src={pokemon.sprites.front_shiny} alt="キャラ色画像" />
         </div>
         <h3 className="cardName">{pokemon.name}</h3>
-        <div className="cardTypes">
+        {/*<div className="cardTypes">
             <div>タイプ</div>
             {pokemon.types.map((type) => {
               return (
@@ -30,7 +30,7 @@ const Card = ({ pokemon }) => {
         <div className="cardData">
             <p className="title">属性：{pokemon.abilities[0].ability.name}</p>
         </div>
-      </div>
+      </div>*/}
     </div>
     );
 };
