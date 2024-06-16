@@ -7,14 +7,14 @@ const Card = ({ pokemon }) => {
       <div className="card">
         <div className="cardImg">
           <img src={pokemon.sprites.front_default} alt="正面画像" />
-          <img src={pokemon.sprites.back_default} alt="背面画像" />
+          <img src={pokemon.sprites.front_shiny} alt="キャラ色画像" />
         </div>
         <h3 className="cardName">{pokemon.name}</h3>
         <div className="cardTypes">
-            <div>属性タイプ</div>
+            <div>タイプ</div>
             {pokemon.types.map((type) => {
               return (
-                <div>
+                <div key={type.type.name}>
                   <span className="typeName">{type.type.name}</span>
                 </div>
               );
