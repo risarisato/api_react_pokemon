@@ -9,3 +9,10 @@ nav {
   justify-content: center; /* 中央 */
   align-items: center; /* 交差軸に対して中央 */
 }
+
+/* Reactのロゴ */
+img {
+  width: 50px;
+  height: 50px;
+  margin-left: 30px;
+}

@@ -7,34 +7,9 @@
 
 /* App全体＝グリッド3枠で表示 */
 .pokemonCardContainer {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center; /* 中央 */
   gap:20px; /* グリッド間の間隔 */
   margin-top: 20px;
-}
-
-/* 前・次ページボタン基本 */
-.btn {
-  padding: 30px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
-/* ボタンの装飾 */
-.btn button {
-  padding: 10px 20px;
-  font-size: 20px;
-  border-radius: 10px;
-  background-color: #5badb7;
-  cursor: pointer; /* マウスオーバー時のカーソル */
-  transition: all 0.3s; /* ホバー時のアニメーション */
-}
-
-/* ボタンの装飾（ホバー時Y方向に沈み込む */
-.btn button:hover {
-  transform: translateY(5px);
-
 }

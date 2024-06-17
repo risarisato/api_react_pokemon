@@ -1,10 +1,10 @@
 /* CSSボックスシャドウジェネレーター */
 /* https://hiroyuki-n.github.io/boxShadow_generator */
 .card{
-  width: 290px;
+  width: 400px;
   box-shadow: 21px 22px 13px -1px #a1cfe2;
   border-radius: 26px;
-  background-color: aliceblue;
+  background-color: rgb(227, 233, 237);
 }
 
 .cardName {
