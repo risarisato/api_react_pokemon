@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import './App.css';
 import ImageCard from "./components/ImageCard/ImageCard";
-import Navbar from "./components/Navber/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import HarryPotterCard from "./components/HarryPotter/HarryPotterCard";
 
 function App() {
