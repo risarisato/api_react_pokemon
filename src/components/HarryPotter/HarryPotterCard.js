@@ -5,8 +5,8 @@ const HarryPotterCard = ({ character }) => {
   return (
     <div className="harryPotterCard">
       <img src={character.image} />
-      <h3>{character.name}</h3>
-      <p>brithday:{character.dateOfBirth}</p>
+      <h3>名前：{character.name}</h3>
+      <p>誕生日:{character.dateOfBirth}</p>
     </div>
   );
 };
