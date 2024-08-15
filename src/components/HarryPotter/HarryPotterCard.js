@@ -6,7 +6,7 @@ const HarryPotterCard = ({ character }) => {
     <div className="harryPotterCard">
       <img src={character.image} />
       <h3>name：{character.name}</h3>
-      <p>dateOfBirth:{character.dateOfBirth}</p>
+      <p>dateOfBirth：{character.dateOfBirth}</p>
     </div>
   );
 };
