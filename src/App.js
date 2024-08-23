@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import './App.css';
 import Card from "./components/pokemonCard/pokemonCard";
 import ImageCard from "./components/ImageCard/ImageCard";
-import Navbar from "./components/Navber/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import HarryPotterCard from "./components/HarryPotter/HarryPotterCard";
 import { getAllPokemon, getPokemon } from "./utiles/pokemon.js";
 
